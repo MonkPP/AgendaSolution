@@ -52,7 +52,7 @@
             resultadoGroupBox2.Controls.Add(toolStrip1);
             resultadoGroupBox2.Location = new Point(0, 130);
             resultadoGroupBox2.Name = "resultadoGroupBox2";
-            resultadoGroupBox2.Size = new Size(680, 334);
+            resultadoGroupBox2.Size = new Size(599, 314);
             resultadoGroupBox2.TabIndex = 1;
             resultadoGroupBox2.TabStop = false;
             resultadoGroupBox2.Text = "Resultado";
@@ -66,7 +66,7 @@
             opcoesFiltroGroupBox1.Controls.Add(label1);
             opcoesFiltroGroupBox1.Location = new Point(0, 0);
             opcoesFiltroGroupBox1.Name = "opcoesFiltroGroupBox1";
-            opcoesFiltroGroupBox1.Size = new Size(680, 124);
+            opcoesFiltroGroupBox1.Size = new Size(599, 124);
             opcoesFiltroGroupBox1.TabIndex = 0;
             opcoesFiltroGroupBox1.TabStop = false;
             opcoesFiltroGroupBox1.Text = "Opcções de Filtro";
@@ -77,7 +77,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { alterarToolStripButton1, excluirToolStripButton2 });
             toolStrip1.Location = new Point(3, 19);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(674, 25);
+            toolStrip1.Size = new Size(593, 25);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -104,7 +104,7 @@
             dataGridView1.Location = new Point(3, 44);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(674, 287);
+            dataGridView1.Size = new Size(593, 267);
             dataGridView1.TabIndex = 1;
             // 
             // label1
@@ -118,36 +118,41 @@
             // 
             // nomeTextBox1
             // 
+            nomeTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             nomeTextBox1.Location = new Point(61, 47);
             nomeTextBox1.Name = "nomeTextBox1";
-            nomeTextBox1.Size = new Size(447, 23);
+            nomeTextBox1.Size = new Size(367, 23);
             nomeTextBox1.TabIndex = 1;
             // 
             // consultaButton1
             // 
-            consultaButton1.Location = new Point(514, 47);
+            consultaButton1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            consultaButton1.Location = new Point(434, 47);
             consultaButton1.Name = "consultaButton1";
-            consultaButton1.Size = new Size(75, 23);
+            consultaButton1.Size = new Size(74, 23);
             consultaButton1.TabIndex = 2;
             consultaButton1.Text = "Consulta";
             consultaButton1.UseVisualStyleBackColor = true;
             // 
             // novoButton2
             // 
-            novoButton2.Location = new Point(595, 46);
+            novoButton2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            novoButton2.Location = new Point(515, 46);
             novoButton2.Name = "novoButton2";
-            novoButton2.Size = new Size(75, 23);
+            novoButton2.Size = new Size(74, 23);
             novoButton2.TabIndex = 3;
             novoButton2.Text = "Novo";
             novoButton2.UseVisualStyleBackColor = true;
+            novoButton2.Click += novoButton2_Click;
             // 
             // ContatoConsultaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(682, 461);
+            ClientSize = new Size(601, 441);
             Controls.Add(resultadoGroupBox2);
             Controls.Add(opcoesFiltroGroupBox1);
+            MinimumSize = new Size(617, 480);
             Name = "ContatoConsultaForm";
             Text = "Consulta";
             resultadoGroupBox2.ResumeLayout(false);

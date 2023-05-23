@@ -21,5 +21,11 @@ namespace AgendaSolution.Win.Cadastros
         {
 
         }
+
+        private void novoButton2_Click(object sender, EventArgs e)
+        {
+            var form = new ContatoCadastroForm();
+            form.ShowDialog();
+        }
     }
 }
