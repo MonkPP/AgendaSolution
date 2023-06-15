@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgendaSolution.Domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace AgendaSolution.Win.Cadastros
 {
     public partial class ContatoConsultaForm : Form
     {
+        private List<Contato> contatos = new List<Contato>();
+
+
         public ContatoConsultaForm()
         {
             InitializeComponent();
@@ -24,8 +28,22 @@ namespace AgendaSolution.Win.Cadastros
 
         private void novoButton2_Click(object sender, EventArgs e)
         {
-            var form = new ContatoCadastroForm();
-            form.ShowDialog();
+            var newContato = ContatoCadastroForm.Incluir();
+            if (newContato != null)
+            {
+                contatos.Add(newContato);
+                ConsultarImpl();
+            }
+        }
+
+        private void ContatoConsultaForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void consultaButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

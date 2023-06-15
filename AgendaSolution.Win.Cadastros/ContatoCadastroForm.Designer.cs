@@ -33,8 +33,8 @@
             label2 = new Label();
             emailTextBox = new TextBox();
             label3 = new Label();
-            button1 = new Button();
-            button2 = new Button();
+            salvarButton1 = new Button();
+            cancelarButton2 = new Button();
             telTextBox = new MaskedTextBox();
             SuspendLayout();
             // 
@@ -81,23 +81,25 @@
             label3.Text = "Email:";
             label3.Click += label3_Click;
             // 
-            // button1
+            // salvarButton1
             // 
-            button1.Location = new Point(470, 144);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 6;
-            button1.Text = "Salvar";
-            button1.UseVisualStyleBackColor = true;
+            salvarButton1.Location = new Point(470, 144);
+            salvarButton1.Name = "salvarButton1";
+            salvarButton1.Size = new Size(75, 23);
+            salvarButton1.TabIndex = 6;
+            salvarButton1.Text = "Salvar";
+            salvarButton1.UseVisualStyleBackColor = true;
+            salvarButton1.Click += button1_Click;
             // 
-            // button2
+            // cancelarButton2
             // 
-            button2.Location = new Point(551, 144);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 7;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = true;
+            cancelarButton2.Location = new Point(551, 144);
+            cancelarButton2.Name = "cancelarButton2";
+            cancelarButton2.Size = new Size(75, 23);
+            cancelarButton2.TabIndex = 7;
+            cancelarButton2.Text = "Cancelar";
+            cancelarButton2.UseVisualStyleBackColor = true;
+            cancelarButton2.Click += button2_Click;
             // 
             // telTextBox
             // 
@@ -113,8 +115,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(661, 198);
             Controls.Add(telTextBox);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(cancelarButton2);
+            Controls.Add(salvarButton1);
             Controls.Add(emailTextBox);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -125,6 +127,7 @@
             Name = "ContatoCadastroForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ContatoCadastroForm";
+            Load += ContatoCadastroForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -137,8 +140,8 @@
         private Label label2;
         private TextBox emailTextBox;
         private Label label3;
-        private Button button1;
-        private Button button2;
+        private Button salvarButton1;
+        private Button cancelarButton2;
         private MaskedTextBox telTextBox;
     }
 }
