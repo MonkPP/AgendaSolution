@@ -83,6 +83,7 @@
             alterarToolStripButton1.Name = "alterarToolStripButton1";
             alterarToolStripButton1.Size = new Size(62, 22);
             alterarToolStripButton1.Text = "Alterar";
+            alterarToolStripButton1.Click += alterarToolStripButton1_Click;
             // 
             // excluirToolStripButton2
             // 

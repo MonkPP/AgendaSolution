@@ -63,7 +63,7 @@
             // contatosToolStripMenuItem
             // 
             contatosToolStripMenuItem.Name = "contatosToolStripMenuItem";
-            contatosToolStripMenuItem.Size = new Size(180, 22);
+            contatosToolStripMenuItem.Size = new Size(122, 22);
             contatosToolStripMenuItem.Text = "Contatos";
             contatosToolStripMenuItem.Click += contatosToolStripMenuItem_Click;
             // 
@@ -78,6 +78,7 @@
             Name = "MainForm";
             Text = "Aplicativo de Agenda";
             WindowState = FormWindowState.Maximized;
+            Load += MainForm_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

@@ -21,5 +21,10 @@ namespace AgendaSolution.Win.Main
         {
 
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

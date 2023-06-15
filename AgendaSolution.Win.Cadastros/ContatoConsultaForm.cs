@@ -44,6 +44,24 @@ namespace AgendaSolution.Win.Cadastros
         private void consultaButton1_Click(object sender, EventArgs e)
         {
 
+            ConsultarImpl();
+        }
+
+
+        private void ConsultarImpl()
+        {
+            contatoBindingSource.DataSource = contatos;
+            dataGridView1.Refresh();
+        }
+
+        private void alterarToolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (contatos.Count <= 0) return;
+
+            var contato = (Contato)contatoBindingSource.Current;
+            ContatoCadastroForm.Alterar(contato);
+            ConsultarImpl();
+
         }
     }
 }
